@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/craigpastro/pgmq-go/mocks"
+	"github.com/dbenders/pgmq-go/mocks"
 	"github.com/jackc/pgx/v5/pgconn"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
@@ -139,6 +139,11 @@ func TestDeleteNotExist(t *testing.T) {
 func TestDeleteBatch(t *testing.T) {
 	pg16.TestDeleteBatch(t)
 	pg17.TestDeleteBatch(t)
+}
+
+func TestSetVisibilityTimeout(t *testing.T) {
+	pg16.TestSetVisibilityTimeout(t)
+	pg17.TestSetVisibilityTimeout(t)
 }
 
 func TestErrorCases(t *testing.T) {

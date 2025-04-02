@@ -1,4 +1,4 @@
-module github.com/craigpastro/pgmq-go
+module github.com/dbenders/pgmq-go
 
 go 1.23.0
 
